@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/rockylinux-9"
+  config.vm.synced_folder ".", "/vagrant", mount_options: ["dmode=755", "fmode=644"]
 
   machines = {
     "control" => "192.168.56.10",
